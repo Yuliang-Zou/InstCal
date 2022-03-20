@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <meta name="author" content="ylzou">
+  <title>Learning Instance-Specific Adaptation for Cross-Domain Segmentation</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+
+  <meta property="og:image" content="images/new_overview.jpeg" />
+</head>
+<body>
+  
+  <div class="navbar-fixed">
+
+    <nav class="grey darken-4" role="navigation">
+      <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"></a>
+        <ul class="left hide-on-med-and-down">
+          <li><a class="nav-item waves-effect waves-light" href="#home">Home</a></li>
+          <li><a class="nav-item waves-effect waves-light" href="#abstract">Abstract</a></li>
+          <li><a class="nav-item waves-effect waves-light" href="#overview">Overview</a></li>
+          <li><a class="nav-item waves-effect waves-light" href="#paper">Paper</a></li>
+          <li><a class="nav-item waves-effect waves-light" href="#download">Download</a></li>
+        </ul>
+
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+  </div>
+  
+
+
+
+
+<!-- Author -->
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container scrollspy" id="home">
+
+      <h4 class="header center black-text">Learning Instance-Specific Adaptation for Cross-Domain Segmentation</h4>
+
+      <br>
+
+      <div class="row center">
+        <h5 class="header col m3 s12">
+          <div class="author"><a href="http://yuliang.vision/" target="blank">Yuliang Zou</a></div>
+          <div class="school"><a href="http://www.vt.edu/" target="blank">Virginia Tech</a></div>
+        </h5>
+
+        <h5 class="header col m3 s12">
+          <div class="author"><a href="https://sites.google.com/view/zizhaozhang" target="blank">Zizhao Zhang</a></div>
+          <div class="school"><a href="https://research.google/teams/cloud-ai/" target="blank">Google Cloud AI</a></div>
+        </h5>
+
+        <h5 class="header col m3 s12">
+          <div class="author"><a href="https://chunliangli.github.io/" target="blank">Chun-Liang Li</a></div>
+          <div class="school"><a href="https://research.google/teams/cloud-ai/" target="blank">Google Cloud AI</a></div>
+        </h5>
+
+        <h5 class="header col m3 s12">
+          <div class="author"><a href="https://sites.google.com/view/hanzhang" target="blank">Han Zhang</a></div>
+          <div class="school"><a href="https://research.google/teams/brain/" target="blank">Google Brain</a></div>
+        </h5>
+
+      </div>
+
+      <div class="row center">
+        <h5 class="header col m6 s12">
+          <div class="author"><a href="https://tomas.pfister.fi/" target="blank">Tomas Pfister</a></div>
+          <div class="school">
+            <div class="school"><a href="https://research.google/teams/cloud-ai/" target="blank">Google Cloud AI</a></div>
+          </div>
+        </h5>
+
+<!--         <h5 class="header col m6 s12">
+          <div class="author"><a href="https://filebox.ece.vt.edu/~jbhuang/" target="blank">Jia-Bin Huang</a></div>
+          <div class="school"><a href="http://www.vt.edu/" target="blank">Virginia Tech</a></div>
+        </h5> -->
+
+        <h5 class="header col m6 s12">
+          <div class="author"><a href="https://jbhuang0604.github.io/" target="blank">Jia-Bin Huang</a></div>
+          <div class="school"><a href="http://www.vt.edu/" target="blank">University of Maryland, College Park</a></div>
+        </h5>
+
+      </div>
+
+<!--         <h6 class="row center">
+          <div>In International Conference on Learning Representations (ICLR), 2021</div>
+        </h6> -->
+
+
+<!--         <video class="responsive-video" autoplay loop controls>
+            <source src="https://filebox.ece.vt.edu/~ylzou/summer2020pseudoseg/teaser.mp4" type="video/mp4">
+        </video> -->
+
+    <div class="row section scrollspy" id="setting">
+        <h5 class="row center">
+          <img class="responsive-img" src="images/setting.png">
+        </h5>
+
+        <h6 class="row center">
+          <div><b>Cross-Domain Segmentation</b></div>
+        </h6>
+    </div>
+
+
+
+    </div>
+  </div>
+
+
+  <div class="container">
+
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row center">
+
+      </div>
+
+    </div>
+
+    <br>
+
+    <div class="row section scrollspy" id="abstract">
+      <div class="title">Abstract</div>
+We propose a test-time adaptation method for cross-domain image segmentation. Our method is simple: Given a new unseen instance at test time, we adapt a pre-trained model by conducting instance-specific BatchNorm (statistics) calibration. Our approach has two core components. First, we replace the manually designed BatchNorm calibration rule with a learnable module. Second, we leverage strong data augmentation to simulate random domain shifts for learning the calibration rule. In contrast to existing domain adaptation methods, our method does not require accessing the target domain data at training time or conducting computationally expensive test-time model training/optimization. Equipping our method with models trained by standard recipes achieves significant improvement, comparing favorably with several state-of-the-art domain generalization and one-shot unsupervised domain adaptation approaches. Combining our method with the domain generalization methods further improves performance, reaching a new state of the art.
+    </div>
+
+    <br>
+
+    <div class="row section scrollspy" id="overview">
+      <div class="title">Overview</div>
+        <h5 class="row center">
+          <img class="responsive-img" src="images/new_overview.jpeg">
+        </h5>
+
+        <h6 class="row">
+          <div>(a) At training time, we learn the BatchNorm calibration rule by training only the newly initialized parameters on the strongly-augmented source domain data; (b) At test time, we conduct instance-specific BatchNorm calibration using the learned calibration rule. Note that our method does not perform test-time training or optimization, and thus the model parameters are fixed after training.</div>
+        </h6>
+    </div>
+
+    <br>
+
+<!-- Papers -->
+    <div class="row section scrollspy" id="paper">
+      <div class="title">Papers</div>
+      <br>
+
+
+    <div class="row">
+      <div class="col s8 offset-s2">
+        <div id='paper-thumbnail'>
+          <a href="https://arxiv.org/pdf/2010.09713.pdf" target="_blank">
+            <img class="responsive-img" src="images/thumbnail.png">
+          </a>
+          <div class="center-align subtitle">arXiv</div>
+        </div>
+      </div>
+    </div>
+
+<!--     <div class="row">
+      <div class="col s12">
+        <div id='paper-thumbnail' class="center-align">
+          <a target="_blank">
+            <img class="responsive-img" src="images/supp.jpg">
+          </a>
+        </div>
+        <div class="center-align subtitle">Supplementary Material</div>
+      </div>
+    </div> -->
+
+  </div>
+
+
+    <div class="row">
+      <div class="subtitle">Citation</div>
+      <p>Yuliang Zou, Zizhao Zhang, Chun-Liang Li, Han Zhang, Tomas Pfister, and Jia-Bin Huang, "Learning Instance-Specific Adaptation for Cross-Domain Segmentation", In arXiv, 2022.</p>
+
+      <br>
+
+      <div class="subtitle">Bibtex</div>
+      <pre>
+@article{zou2021pseudoseg,
+  title={Learning Instance-Specific Adaptation for Cross-Domain Segmentation},
+  author={Zou, Yuliang and Zhang, Zizhao and Li, Chun-Liang  and Zhang, Han and Pfister, Tomas and Huang, Jia-Bin},
+  journal={arXiv},
+  year={2022}
+}
+</pre>
+
+
+
+
+    </div>
+    <!-- Download -->
+    <!-- TODO: Fix url -->
+    <div class="section row scrollspy" id="download">
+      <div class="title">Download</div>
+      <div class="row">
+
+        <div class="col m6 s12 center">
+          <!-- <a href="./index.html" target="_blank"> -->
+            <img src="images/github.png">
+          <!-- </a> -->
+          <br>
+          Code [coming soon]
+          <!-- <a href="./index.html" target="_blank">Code [coming soon]</a> -->
+        </div>
+
+<!--         <div class="col m4 s12 center">
+          <a href="https://filebox.ece.vt.edu/~ylzou/summer2020pseudoseg/pascal_voc_seg.tar" target="_blank">
+            <img src="images/icon_zip.png">
+          </a>
+          <br>
+          <a href="https://filebox.ece.vt.edu/~ylzou/summer2020pseudoseg/pascal_voc_seg.tar" target="_blank">VOC2012 tfrecord</a>
+          <br>
+          <a href="https://filebox.ece.vt.edu/~ylzou/summer2020pseudoseg/pascal_voc_seg.tar" target="_blank">[VT Server]</a>
+          <a href="https://drive.google.com/file/d/1MCX45fZjx5pkPkGZtDnMxTxdy_tSub_Y/view?usp=sharing">[Google Drive]</a>
+        </div>
+
+        <div class="col m4 s12 center">
+          <a href="https://filebox.ece.vt.edu/~ylzou/summer2020pseudoseg/coco.tar" target="_blank">
+            <img src="images/icon_zip.png">
+          </a>
+          <br>
+          <a href="https://filebox.ece.vt.edu/~ylzou/summer2020pseudoseg/coco.tar" target="_blank">COCO tfrecord</a>
+          <br>
+          <a href="https://filebox.ece.vt.edu/~ylzou/summer2020pseudoseg/coco.tar" target="_blank">[VT Server]</a>
+          <a href="https://drive.google.com/file/d/1w6-6iahS_ENw4hZISld6rBE-KEwAKhw1/view?usp=sharing">[Google Drive]</a>
+        </div> -->
+
+
+      </div>
+    </div>
+
+    <br>
+
+
+
+
+  </div>
+
+  <footer class="page-footer grey lighten-3">
+        
+    <div class="footer-copyright center black-text">
+      We thank <a href="http://graduatestudents.ucmerced.edu/wlai24/">Jason Lai</a> for providing this wonderful website template.
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
